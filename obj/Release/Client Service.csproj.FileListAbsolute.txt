@@ -1,0 +1,8 @@
+C:\Users\SHANY\Desktop\IMS_Service\Client Service\bin\Release\Client Service.exe.config
+C:\Users\SHANY\Desktop\IMS_Service\Client Service\bin\Release\Client Service.exe
+C:\Users\SHANY\Desktop\IMS_Service\Client Service\bin\Release\Client Service.pdb
+C:\Users\SHANY\Desktop\IMS_Service\Client Service\obj\Release\Client Service.csproj.AssemblyReference.cache
+C:\Users\SHANY\Desktop\IMS_Service\Client Service\obj\Release\Client Service.csproj.SuggestedBindingRedirects.cache
+C:\Users\SHANY\Desktop\IMS_Service\Client Service\obj\Release\Client Service.csproj.CoreCompileInputs.cache
+C:\Users\SHANY\Desktop\IMS_Service\Client Service\obj\Release\Client Service.exe
+C:\Users\SHANY\Desktop\IMS_Service\Client Service\obj\Release\Client Service.pdb
