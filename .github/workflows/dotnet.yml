@@ -38,7 +38,7 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          bin/Release/**/*
+          bin/Release/Client Service.exe
 
     - name: Upload Release Asset
       id: upload-release-asset
@@ -47,6 +47,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.ACCESS_KEY }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: bin/Release/**/*
+        asset_path: bin/Release/Client Service.exe
         asset_name: IMSClient.exe  # Change to your service installer's name
         asset_content_type: application/octet-stream
