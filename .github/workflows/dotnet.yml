@@ -34,7 +34,7 @@ jobs:
 
     - name: Generate release tag
       id: generate_release_tag
-      uses: alexvingg/next-release-tag@v1.0.3
+      uses: alexvingg/next-release-tag@v1.0.4
       with:
         github_token: ${{ secrets.ACCESS_KEY }}
         tag_prefix: ''
