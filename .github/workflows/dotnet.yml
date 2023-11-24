@@ -1,0 +1,52 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - master  # Set the branch you want to trigger the workflow on
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1'  # Change to the version of .NET you're using
+
+    - name: Build Windows service
+      run: |
+        dotnet restore
+        dotnet build --configuration Release
+      working-directory: /
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest  # You can use a different OS for releasing
+
+    steps:
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        files: |
+          bin/Release/**/*
+        draft: false
+        prerelease: false
+
+    - name: Upload Release Asset
+      id: upload-release-asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: bin/Release/**/*
+        asset_name: IMSClient.exe  # Change to your service installer's name
+        asset_content_type: application/octet-stream
