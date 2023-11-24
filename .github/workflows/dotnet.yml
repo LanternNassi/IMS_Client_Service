@@ -37,6 +37,8 @@ jobs:
         tag_name: test_001
         draft: false
         prerelease: false
+        files: |
+          bin/Release/**/*
 
     - name: Upload Release Asset
       id: upload-release-asset
