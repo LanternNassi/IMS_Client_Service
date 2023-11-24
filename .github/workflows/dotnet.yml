@@ -26,9 +26,6 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-latest  # You can use a different OS for releasing
-    env:
-      
-
     steps:
     - name: Create Release
       id: create_release
