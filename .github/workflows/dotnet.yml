@@ -22,7 +22,7 @@ jobs:
       run: |
         dotnet restore
         dotnet build --configuration Release
-      working-directory: .
+      working-directory: /
 
   release:
     needs: build
@@ -35,8 +35,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        files: |
-          bin/Release/**/*
         draft: false
         prerelease: false
 
