@@ -26,6 +26,8 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-latest  # You can use a different OS for releasing
+    env:
+      
 
     steps:
     - name: Create Release
@@ -34,11 +36,11 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.ACCESS_KEY }}
       with:
-        tag_name: test_002
+        tag_name: test_003
         draft: false
         prerelease: false
         files: |
-          bin/Release/Client Service.exe
+          bin/Release/**/*
 
     - name: Upload Release Asset
       id: upload-release-asset
@@ -47,6 +49,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.ACCESS_KEY }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: bin/Release/Client Service.exe
-        asset_name: IMSClient.exe  # Change to your service installer's name
+        asset_path: bin/Release/**/*
+        asset_name: IMSClient.exe  
         asset_content_type: application/octet-stream
