@@ -22,7 +22,7 @@ jobs:
       run: |
         dotnet restore
         dotnet build --configuration Release
-      working-directory: /
+      working-directory: .
 
   release:
     needs: build
