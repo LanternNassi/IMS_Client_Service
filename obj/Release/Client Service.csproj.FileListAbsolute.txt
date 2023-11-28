@@ -6,3 +6,5 @@ C:\Users\SHANY\Desktop\IMS_Service\Client Service\obj\Release\Client Service.csp
 C:\Users\SHANY\Desktop\IMS_Service\Client Service\obj\Release\Client Service.csproj.CoreCompileInputs.cache
 C:\Users\SHANY\Desktop\IMS_Service\Client Service\obj\Release\Client Service.exe
 C:\Users\SHANY\Desktop\IMS_Service\Client Service\obj\Release\Client Service.pdb
+C:\Users\SHANY\Desktop\IMS_Service\Client Service\obj\Release\Client_Service.ProjectInstaller.resources
+C:\Users\SHANY\Desktop\IMS_Service\Client Service\obj\Release\Client Service.csproj.GenerateResource.cache
