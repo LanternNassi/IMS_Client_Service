@@ -43,7 +43,7 @@ namespace Client_Service
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error getting local IP address: {ex.Message}");
+                Console.WriteLine($"Error getting loca IP address: {ex.Message}");
 
             }
             listener.Prefixes.Add("http://" + ip_address + ":9000/");
