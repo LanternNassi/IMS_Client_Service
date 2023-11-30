@@ -28,31 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.IMSProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
-            this.ClientServer = new System.ServiceProcess.ServiceInstaller();
+            this.serviceProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
+            this.serviceInstaller1 = new System.ServiceProcess.ServiceInstaller();
             // 
-            // IMSProcessInstaller1
+            // serviceProcessInstaller1
             // 
-            this.IMSProcessInstaller1.Password = null;
-            this.IMSProcessInstaller1.Username = null;
+            this.serviceProcessInstaller1.Password = null;
+            this.serviceProcessInstaller1.Username = null;
             // 
-            // ClientServer
+            // serviceInstaller1
             // 
-            this.ClientServer.DisplayName = "IMSCLIENTSERVER";
-            this.ClientServer.ServiceName = "Service1";
-            this.ClientServer.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            this.serviceInstaller1.ServiceName = "Service1";
             // 
             // ProjectInstaller
             // 
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
-            this.IMSProcessInstaller1,
-            this.ClientServer});
+            this.serviceProcessInstaller1,
+            this.serviceInstaller1});
 
         }
 
         #endregion
 
-        private System.ServiceProcess.ServiceProcessInstaller IMSProcessInstaller1;
-        private System.ServiceProcess.ServiceInstaller ClientServer;
+        private System.ServiceProcess.ServiceProcessInstaller serviceProcessInstaller1;
+        private System.ServiceProcess.ServiceInstaller serviceInstaller1;
     }
 }
